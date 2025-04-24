@@ -15,18 +15,18 @@ jobs:
   lint:
     runs-on: ubuntu-latest
 
-# github uses its own preconfigured actions actions/blabla
-steps:
-  - name: Checkout repository
-    uses: actions/checkout@v3
+    # github uses its own preconfigured actions actions/blabla
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-  - name: Set up Node.js
-    uses: actions/setup-node@v3
-    with:
-      node-version: '23.9.0' # my node version
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '23.9.0' # my node version
 
-  - name: Install dependencies
-    run: npm install
+      - name: Install dependencies
+        run: npm install
 
-  - name: Run linter
-    run: npx eslint
+      - name: Run linter
+        run: npx eslint .
